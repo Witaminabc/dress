@@ -1,6 +1,7 @@
-.portfolio{
+.portfolio {
   @include container();
   @include padding-vertical-30();
+}
     .portfolio-wrap{
         .portfolio-slaider{
           overflow:hidden;
@@ -71,12 +72,17 @@
           }
         }
       }
+      .portfolio__blocks-page{
+        .portfolio__block {
+          width: calc((100% / 4) - 1rem);
+        }
+      }
 
     }
-}
+
 
 @media #{$mobile-only-two} {
-  .portfolio {
+  //.portfolio {
 
 
     .portfolio-wrap {
@@ -89,4 +95,4 @@
       }
     }
   }
-}
+//}

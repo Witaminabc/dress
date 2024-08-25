@@ -1,0 +1,110 @@
+.jurnal-main{
+  @include container();
+  @include padding-vertical-30();
+
+  .jurnal-main-select{
+    background-color:rgba(81, 121, 222, 1);
+    padding:20px;
+    margin:15px 0;
+    border-radius:16px;
+    ul{
+      display:flex;
+      gap:2rem;
+      li{
+        color:white;
+        list-style-type:none;
+      }
+    }
+  }
+  .jurnal-main-wrap{
+    .jurnal-main__blocks{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      .jurnal-main__block{
+        width:calc(25% - calc(3rem / 4));
+        border-radius: 14px;
+        background-color: rgba(255, 255, 255, 1);
+        border: 1px solid gainsboro;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .jurnal-main__block-img{
+          img{
+            width:100%;
+          }
+        }
+
+        .jurnal-main__block-text{
+          padding:20px;
+          font-family: Montserrat;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 18px;
+          text-align: left;
+          color: rgba(174, 41, 92, 1);
+        }
+
+        .jurnal-main__block-date{
+          padding:20px;
+        }
+      }
+
+      .jurnal-main__block:nth-child(2), .jurnal-main__block:nth-child(3){
+        width:calc(25% - calc(2rem / 3));
+      }
+
+      .jurnal-main__block:nth-child(1) {
+        width:calc(50% - calc(2rem / 3));
+        border-radius: 14px;
+        overflow:hidden;
+        background-color: rgba(255, 255, 255, 1);
+        border: 1px solid gainsboro;
+        position: relative;
+
+          .jurnal-main__block-text{
+            color:white;
+            padding:20px;
+            position:absolute;
+              bottom:0;
+            font-family: Montserrat;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 36px;
+            text-align: left;
+          }
+
+          .jurnal-main__block-date{
+            display:none;
+            padding:20px;
+          }
+
+        .jurnal-main__block-img{
+          img{
+            height:100%;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media #{$mobile-only-two} {
+  .jurnal-main {
+    .jurnal-main-wrap {
+      .jurnal-main__blocks {
+        .jurnal-main__block{
+          width:100%;
+        }
+        .jurnal-main__block:nth-child(1){
+          width:100%;
+        }
+        .jurnal-main__block:nth-child(2),.jurnal-main__block:nth-child(3){
+          width:100%;
+        }
+      }
+    }
+  }
+}

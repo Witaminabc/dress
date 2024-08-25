@@ -1,0 +1,26 @@
+.detail-portfolio{
+  @include container();
+  .detail-portfolio-wrap{
+    display:flex;
+    gap: 1rem;
+    .detail-portfolio__text{
+
+      flex:1 1 70% ;
+    }
+    .detail-portfolio__imgs{
+      flex:1 1 30% ;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 1rem;
+      .detail-portfolio__img{
+        width:calc(100%);
+        img{
+          width:100%;
+        }
+      }
+      .detail-portfolio__img:nth-child(2),.detail-portfolio__img:nth-child(3){
+        width:calc(50% - 1rem);
+      }
+    }
+  }
+}
